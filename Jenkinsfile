@@ -6,14 +6,16 @@ node {
    }
    stage('Build') {
       // Run the maven build
+      def os = System.properties['os.name'].toLowerCase()
+      echo "OS: ${os}"
       if (isUnix()) {
          sh "mvn clean install"
       } else {
          bat(/mvn clean install/)
       }
    }
-   stage('Results') {
-      junit '**/target/surefire-reports/TEST-*.xml'
-      archive 'target/*.jar'
+   stage('Deploy'){
+        sh "cp withu-rest-1.0-SNAPSHOT.war withu-api.war"
+        sh "cp withu-api.war /Users/xinrui/server/apache-tomcat-8.5.8/webapps"
    }
 }
