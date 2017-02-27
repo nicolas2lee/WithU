@@ -15,7 +15,6 @@ node {
       }
    }
    stage('Deploy'){
-        sh "cp withu-rest-1.0-SNAPSHOT.war withu-api.war"
-        sh "cp withu-api.war /Users/xinrui/server/apache-tomcat-8.5.8/webapps"
+        sh "cp /Users/xinrui/.jenkins/workspace/WithUPipeline/withu-rest/target/withu-rest-1.0-SNAPSHOT.war /Users/xinrui/server/apache-tomcat-8.5.8/webapps"
    }
 }
