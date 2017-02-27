@@ -6,8 +6,8 @@ node {
    }
    stage('Build') {
       // Run the maven build
-      def os = System.properties['os.name'].toLowerCase()
-      echo "OS: ${os}"
+      //def os = System.properties['os.name'].toLowerCase()
+      //echo "OS: ${os}"
       if (isUnix()) {
          sh "mvn clean install"
       } else {
