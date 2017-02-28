@@ -4,15 +4,14 @@ node {
       // Get code from a GitHub repository
       git 'https://github.com/nicolas2lee/WithU'
    }
-
    stage('SonarQube analysis') {
        // requires SonarQube Scanner 2.8+
        def scannerHome = tool 'SonarQube Scanner 2.8';
+       echo scannerHome
        withSonarQubeEnv('My SonarQube Server') {
          sh "${scannerHome}/bin/sonar-scanner"
        }
     }
-
    stage('Build') {
       // Run the maven build
       //def os = System.properties['os.name'].toLowerCase()
