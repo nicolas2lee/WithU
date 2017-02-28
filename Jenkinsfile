@@ -6,6 +6,7 @@ node {
    }
    stage('SonarQube analysis') {
        // requires SonarQube Scanner 2.8+
+       echo "sonar analysis"
        def scannerHome = tool 'SonarQube Scanner 2.8';
        echo scannerHome
        withSonarQubeEnv('My SonarQube Server') {
