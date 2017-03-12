@@ -1,23 +1,25 @@
-package tao.controller;
+package tao.controller.withu;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import tao.UserService;
-import tao.object.UserEntity;
+import tao.withu.CoordinateService;
+import tao.object.withu.CoordinateEntity;
 
 import java.util.List;
 
+/**
+ * Created by xinrui on 12/03/17.
+ */
 @RestController
-@RequestMapping("/users")
-public class UserController{
-
+@RequestMapping("/coordinates")
+public class CoordinateController {
     @Autowired
-    private UserService userService;
+    private CoordinateService coordinateService;
 
     @RequestMapping(value = "/all", method= RequestMethod.GET)
-    public List<UserEntity> all(){
-        return userService.findAll();
+    public List<CoordinateEntity> all(){
+        return coordinateService.findAll();
     }
 }

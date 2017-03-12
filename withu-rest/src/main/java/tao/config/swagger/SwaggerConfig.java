@@ -1,4 +1,4 @@
-package tao.config;
+package tao.config.swagger;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

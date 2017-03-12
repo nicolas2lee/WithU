@@ -1,12 +1,12 @@
-package tao.impl;
+package tao.oscra.impl;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tao.UserRepository;
-import tao.UserService;
-import tao.object.UserEntity;
+import tao.oscra.UserRepository;
+import tao.oscra.UserService;
+import tao.object.oscra.UserEntity;
 
 import java.util.List;
 

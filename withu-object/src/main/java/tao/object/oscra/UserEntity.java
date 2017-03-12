@@ -1,9 +1,11 @@
-package tao.object;
+package tao.object.oscra;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "User", schema = "oscra")
 public class UserEntity{
     @Id
     private Long id;

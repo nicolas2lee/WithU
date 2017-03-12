@@ -1,7 +1,7 @@
-package tao;
+package tao.oscra;
 
 import org.springframework.data.repository.CrudRepository;
-import tao.object.UserEntity;
+import tao.object.oscra.UserEntity;
 
 import java.util.List;
 
