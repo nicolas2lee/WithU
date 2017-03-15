@@ -26,13 +26,13 @@ import javax.sql.DataSource;
 @EnableJpaRepositories(
         entityManagerFactoryRef = "withuEntityManagerFactory",
         transactionManagerRef = "withuTransactionManager",
-        basePackages = { "tao.withu" })
+        basePackages =  "tao.withu" )
 public class WithudevDataSourceConfig {
 
 
     @Bean(name = "withuDataSource")
     @Primary
-    @ConfigurationProperties(prefix = "withudev.datasource")
+    @ConfigurationProperties(prefix = "with_udev.datasource")
     public DataSource dataSourceWithudev() {
         return (DataSource) DataSourceBuilder.create().build();
     }
@@ -43,8 +43,8 @@ public class WithudevDataSourceConfig {
             EntityManagerFactoryBuilder builder,
             @Qualifier("withuDataSource") DataSource withudevDataSource) {
         return builder.dataSource(withudevDataSource)
-                .packages("tao.object.withu")
-                .persistenceUnit("withu")
+                .packages("tao")
+                .persistenceUnit("coda")
                 .build();
     }
 

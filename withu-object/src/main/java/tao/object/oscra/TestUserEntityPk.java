@@ -1,14 +1,15 @@
 package tao.object.oscra;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
 
-@Entity
-@Table(name = "User", schema = "oscra")
-public class UserEntity{
+/**
+ * Created by xinrui on 15/03/17.
+ */
+public class TestUserEntityPk implements Serializable{
     @Id
     private Long id;
+    @Id
     private String username;
 
     public Long getId() {
@@ -27,3 +28,4 @@ public class UserEntity{
         this.username = username;
     }
 }
+
