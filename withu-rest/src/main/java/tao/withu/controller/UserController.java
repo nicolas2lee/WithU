@@ -1,13 +1,12 @@
-package tao.controller;
+package tao.withu.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import tao.UserService;
-import tao.impl.UserServiceImpl;
-import tao.object.result.UserEntityResult;
+import tao.withu.UserService;
+import tao.withu.withu.object.UserEntity;
 
 import java.util.List;
 
@@ -22,16 +21,13 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "/all", method= RequestMethod.GET)
-    public List<UserEntityResult> all(){
-        //return userService.findAll();
-        return null;
+    public List<UserEntity> all(){
+        return userService.findAll();
     }
 
     @RequestMapping(value = "/add", method= RequestMethod.POST)
-    public List<UserEntityResult> add(@RequestBody UserEntityResult userEntityResult){
-        //return userService.findAll();
-        return userService.addUser(userEntityResult);
-        //return null;
+    public UserEntity add(@RequestBody UserEntity userEntity){
+        return userService.addUser(userEntity);
     }
 
 }

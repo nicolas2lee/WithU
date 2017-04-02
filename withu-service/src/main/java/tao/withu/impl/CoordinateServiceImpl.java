@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tao.withu.CoordinateService;
-import tao.object.withu.CoordinateEntity;
-import tao.withu.CoordinateRepository;
+import tao.withu.withu.object.CoordinateEntity;
+import tao.withu.withu.repository.CoordinateRepository;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Service
 @Transactional
-public class CoordinateServiceImpl implements CoordinateService{
+public class CoordinateServiceImpl implements CoordinateService {
     @Autowired
     CoordinateRepository coordinateRepository;
 

@@ -1,11 +1,11 @@
-package tao.controller.withu;
+package tao.withu.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import tao.withu.CoordinateService;
-import tao.object.withu.CoordinateEntity;
+import tao.withu.withu.object.CoordinateEntity;
 
 import java.util.List;
 

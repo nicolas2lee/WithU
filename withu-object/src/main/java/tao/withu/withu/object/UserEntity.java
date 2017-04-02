@@ -1,4 +1,6 @@
-package tao.object.withu;
+package tao.withu.withu.object;
+
+import tao.withu.withu.object.common.AbstractEntity;
 
 import javax.persistence.*;
 
@@ -7,10 +9,9 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "User", schema = "withu")
-@IdClass(TestUserEntityPk.class)
-public class TestUserEntity {
-    @Id
-    private Long id;
+@IdClass(UserEntityPk.class)
+public class UserEntity extends AbstractEntity {
+
     @Id
     private String username;
 
@@ -28,9 +29,6 @@ public class TestUserEntity {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getUsername() {
         return username;

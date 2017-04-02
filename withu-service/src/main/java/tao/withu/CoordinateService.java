@@ -1,6 +1,6 @@
 package tao.withu;
 
-import tao.object.withu.CoordinateEntity;
+import tao.withu.withu.object.CoordinateEntity;
 
 import java.util.List;
 

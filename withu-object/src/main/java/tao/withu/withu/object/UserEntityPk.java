@@ -1,4 +1,4 @@
-package tao.object.oscra;
+package tao.withu.withu.object;
 
 import javax.persistence.Id;
 import java.io.Serializable;
@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * Created by xinrui on 15/03/17.
  */
-public class TestUserEntityPk implements Serializable{
+public class UserEntityPk implements Serializable{
     @Id
     private Long id;
     @Id
@@ -28,4 +28,3 @@ public class TestUserEntityPk implements Serializable{
         this.username = username;
     }
 }
-

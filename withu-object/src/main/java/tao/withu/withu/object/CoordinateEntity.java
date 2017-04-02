@@ -1,7 +1,8 @@
-package tao.object.withu;
+package tao.withu.withu.object;
+
+import tao.withu.withu.object.common.AbstractEntity;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -9,9 +10,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Coordinate", schema = "withudev")
-public class CoordinateEntity {
-    @Id
-    private Long id;
+public class CoordinateEntity extends AbstractEntity {
+
     private Double longitude;
     private Double latitude;
 
@@ -35,7 +35,4 @@ public class CoordinateEntity {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

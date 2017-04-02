@@ -9,6 +9,12 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.1.RELEASE</version>
+    </parent>
+
     <modules>
         <module>withu-dao</module>
         <module>withu-object</module>
@@ -16,5 +22,52 @@
         <module>withu-service</module>
     </modules>
 
-    
+    <properties>
+        <spring-boot.version>1.5.1.RELEASE</spring-boot.version>
+        <withu.version>1.0-SNAPSHOT</withu.version>
+        <springfox.io>2.2.2</springfox.io>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>3.0.5.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>tao</groupId>
+                <artifactId>withu-object</artifactId>
+                <version>${withu.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tao</groupId>
+                <artifactId>withu-service</artifactId>
+                <version>${withu.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tao</groupId>
+                <artifactId>withu-dao</artifactId>
+                <version>${withu.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox.io}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox.io}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
