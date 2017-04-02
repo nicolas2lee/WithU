@@ -8,12 +8,15 @@
     <artifactId>withu-rest</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <packaging>war</packaging>
+    <packaging>${packging.format}</packaging>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
+        <groupId>tao</groupId>
+        <artifactId>WithU</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <!--groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.0.RELEASE</version>
+        <version>1.4.0.RELEASE</version-->
     </parent>
 
     <properties>
@@ -22,7 +25,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
+            <groupId>
+                org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
@@ -56,7 +60,93 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
+            <scope>${tomcat.provided}</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>weblogic/*</exclude>
+                    <exclude>static/**</exclude>
+                </excludes>
+            </resource>
+        </resources>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>weblogic</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>3.0.0</version>
+                        <configuration>
+                            <failOnMissingWebXml>false</failOnMissingWebXml>
+                            <webResources>
+                                <resource>
+                                    <filtering>true</filtering>
+                                    <directory>src/main/resources/weblogic</directory>
+                                    <targetPath>WEB-INF</targetPath>
+                                    <includes>
+                                        <include>weblogic.xml</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <filtering>true</filtering>
+                                    <directory>src/main/resources/static</directory>
+                                    <targetPath>/</targetPath>
+                                    <includes>
+                                        <include>/**</include>
+                                        <!-- <include>assets/**</include>-->
+                                    </includes>
+                                </resource>
+                            </webResources>
+                        </configuration>
+                    </plugin>
+                </plugins>
+
+            </build>
+            <properties>
+                <packging.format>war</packging.format>
+                <tomcat.provided>provided</tomcat.provided>
+            </properties>
+        </profile>
+        <profile>
+            <id>docker</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                    </plugin>
+                    <!-- tag::plugin[] -->
+                    <plugin>
+                        <groupId>com.spotify</groupId>
+                        <artifactId>docker-maven-plugin</artifactId>
+                        <version>0.4.11</version>
+                        <configuration>
+                            <imageName>${project.artifactId}</imageName>
+                            <dockerDirectory>src/main/docker</dockerDirectory>
+                            <resources>
+                                <resource>
+                                    <targetPath>/</targetPath>
+                                    <directory>${project.build.directory}</directory>
+                                    <include>${project.build.finalName}.jar</include>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <packging.format>jar</packging.format>
+                <tomcat.provided>compile</tomcat.provided>
+            </properties>
+        </profile>
+    </profiles>
 </project>
