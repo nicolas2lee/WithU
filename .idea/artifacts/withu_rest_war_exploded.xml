@@ -7,7 +7,6 @@
           <element id="module-output" name="withu-rest" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:unknown" />
           <element id="archive" name="withu-service-1.0-SNAPSHOT.jar">
             <element id="module-output" name="withu-service" />
           </element>
@@ -54,7 +53,6 @@
           <element id="library" level="project" name="Maven: org.mapstruct:mapstruct:1.0.0.CR1" />
           <element id="library" level="project" name="Maven: io.swagger:swagger-annotations:1.5.3" />
           <element id="library" level="project" name="Maven: io.swagger:swagger-models:1.5.3" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" />
           <element id="library" level="project" name="Maven: io.springfox:springfox-spi:2.2.2" />
           <element id="library" level="project" name="Maven: io.springfox:springfox-core:2.2.2" />
           <element id="library" level="project" name="Maven: io.springfox:springfox-schema:2.2.2" />
@@ -75,6 +73,13 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.6.RELEASE" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.40" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.5.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.6" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:1.5.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.11" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:8.5.11" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:8.5.11" />
         </element>
       </element>
       <element id="directory" name="META-INF">

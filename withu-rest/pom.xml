@@ -17,10 +17,10 @@
     <packaging>war</packaging>
 
     <dependencies>
-        <dependency>
+<!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>tao</groupId>
             <artifactId>withu-service</artifactId>
@@ -44,11 +44,15 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
         <!-- Deploy to Tomcat-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
     </dependencies>
 

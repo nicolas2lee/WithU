@@ -1,6 +1,6 @@
-package tao.withu.withu.object;
+package tao.withu.object;
 
-import tao.withu.withu.object.common.AbstractEntity;
+import tao.withu.object.common.AbstractEntity;
 
 import javax.persistence.*;
 

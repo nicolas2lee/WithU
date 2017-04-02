@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import tao.withu.CoordinateService;
-import tao.withu.withu.object.CoordinateEntity;
+import tao.withu.object.CoordinateEntity;
 
 import java.util.List;
 

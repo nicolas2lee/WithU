@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import tao.withu.UserService;
-import tao.withu.withu.object.UserEntity;
+import tao.withu.object.UserEntity;
 
 import java.util.List;
 
@@ -22,7 +22,10 @@ public class UserController {
 
     @RequestMapping(value = "/all", method= RequestMethod.GET)
     public List<UserEntity> all(){
-        return userService.findAll();
+
+        List<UserEntity> result = userService.findAll();
+        System.out.println("========= controller ============");
+        return result;
     }
 
     @RequestMapping(value = "/add", method= RequestMethod.POST)

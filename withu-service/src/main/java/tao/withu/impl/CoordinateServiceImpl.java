@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tao.withu.CoordinateService;
-import tao.withu.withu.object.CoordinateEntity;
-import tao.withu.withu.repository.CoordinateRepository;
+import tao.withu.object.CoordinateEntity;
+import tao.withu.repository.CoordinateRepository;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package tao.withu.withu.repository;
+package tao.withu.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import tao.withu.withu.object.CoordinateEntity;
+import tao.withu.object.CoordinateEntity;
 
 import java.util.List;
 

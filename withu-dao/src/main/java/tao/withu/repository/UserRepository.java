@@ -1,7 +1,7 @@
-package tao.withu.withu.repository;
+package tao.withu.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import tao.withu.withu.object.UserEntity;
+import tao.withu.object.UserEntity;
 
 /**
  * Created by xinrui on 15/03/17.

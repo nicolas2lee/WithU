@@ -1,4 +1,4 @@
-package tao.withu.withu.object.common;
+package tao.withu.object.common;
 
 import javax.persistence.*;
 import java.util.Date;

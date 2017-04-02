@@ -1,4 +1,4 @@
-package tao.withu.withu.object;
+package tao.withu.object;
 
 import javax.persistence.Id;
 import java.io.Serializable;

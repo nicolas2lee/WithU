@@ -1,6 +1,6 @@
 package tao.withu;
 
-import tao.withu.withu.object.UserEntity;
+import tao.withu.object.UserEntity;
 
 import java.util.List;
 
