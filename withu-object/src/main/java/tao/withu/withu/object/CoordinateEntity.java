@@ -9,7 +9,7 @@ import javax.persistence.Table;
  * Created by xinrui on 12/03/17.
  */
 @Entity
-@Table(name = "Coordinate", schema = "withudev")
+/*@Table(name = "coordinate", schema = "withudev")*/
 public class CoordinateEntity extends AbstractEntity {
 
     private Double longitude;

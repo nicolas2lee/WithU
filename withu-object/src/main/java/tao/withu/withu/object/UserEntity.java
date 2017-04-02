@@ -8,11 +8,10 @@ import javax.persistence.*;
  * Created by xinrui on 15/03/17.
  */
 @Entity
-@Table(name = "User", schema = "withu")
-@IdClass(UserEntityPk.class)
+/*@Table(name = "user", schema = "withu")*/
+/*@IdClass(UserEntityPk.class)*/
 public class UserEntity extends AbstractEntity {
 
-    @Id
     private String username;
 
     private String email;
